@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Essais divers</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/72f3363021.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <h1>Réservez votre Vélo</h1>
+        
+        <div class="intro">
+            <div id="slider">
+                <img src="./images/tome1.jpg" alt="Lanfeust - Un, deux, Troy" id="slide">
+                <p id="description"></p>
+            </div>
+            <div id="nav">
+                <button id="previous">Previous</button>
+                <button id="pause">Pause</button>
+                <button id="next">Next</button>
+            </div>  
+        </div>
+        <div class="booking">
+            <div class="partone">
+                <div id="map">
+
+                </div>
+                <div class="detail">
+                    <h2>Détail de la station</h2>
+                    <p>Adresse : <span id="adress">...</span></p>
+                    <p><span id="remain_places">places</span></p>
+                    <p><span id="remain_bikes">vélos disponibles</span></p>
+                    <form action="" method="post">
+                        <div class="line">
+                            <label for="last_name">Nom</label>
+                            <input type="text" name="user_lastname" id="name">
+                        </div>
+                        <div class="line">
+                            <label for="first_name">Prénom</label>
+                            <input type="text" name="user_firstname" id="first_name">
+                        </div>
+                        <div class="button">
+                            <button type="submit">Réserver</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="parttwo">
+                <p>Vélo réservé à la station <span id="station"></span> par <span id="client"></span></p>
+                <p>Temps restant : <span id="timer"></span></p>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script src="./script.js"></script>

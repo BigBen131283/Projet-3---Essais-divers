@@ -1,0 +1,66 @@
+/*General*/
+
+h1
+{
+    display: flex;
+    justify-content: center;
+}
+
+/*Intro - Slider*/
+
+#slider
+{
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40%;
+    height: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+}
+
+#slider p
+{
+    width: 65%;
+    padding-top: 10%;
+    margin: 3%;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+
+/*Navigation*/
+
+.nav
+{
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+}
+
+.nav i
+{
+    height: 100%;
+    width: 15%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Part One*/
+/*map*/
+
+/*description*/
+
+/*Part Two*/

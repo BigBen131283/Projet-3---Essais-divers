@@ -17,7 +17,15 @@ tomeDescription.textContent = synopsis[0]
 
 //map
 
-let map = L.map('map').setView([51.505, -0.09], 13);
+let mapquestkey = 'rQpw7O2I6ADzhQAAJLS4vZZ5PN7TLMX2';
+L.mapquest.key = mapquestkey;
+let map = L.map('map', {
+    center: [51.505, -0.09],
+    layers: L.mapquest.tileLayer('map'),
+    zoom: 12,   // Zoom range from 1 to 18, the greater the more focused
+    minZoom: 10,
+    maxZoom: 16,
+});
 
 // functions ===========================================================
 

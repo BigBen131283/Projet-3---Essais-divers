@@ -1,6 +1,6 @@
-const slide = ["./images/tome1.jpg", "./images/tome2.jpg", "./images/tome3.jpg", "./images/tome4.jpg"]
+// variables ============================================================
 
-let position = 0
+const slide = ["./images/tome1.jpg", "./images/tome2.jpg", "./images/tome3.jpg", "./images/tome4.jpg"]
 
 const tome1 = "Dans le monde de Troy où chacun possède un pouvoir, Lanfeust, un apprenti forgeron peut fondre le métal. Il connaît une vie paisible jusqu'au jour où il découvre qu'au contact d'une épée, il peut posséder le pouvoir absolu ! Accompagné du vieux sage Nicolède et de ses deux filles, Cyan et Cixi, il est emporté dans un tourbillon d'aventures au cours desquelles il va se lier d'amitié avec la plus dangereuse des créatures, le troll Hébus !"
 const tome2 = "Nos aventuriers sont maintenant arrivés à Ekmul. Lanfeust rencontre les sages du palais d'Ekmul, qui sont partagés entre incrédulité, méfiance et confiance. Ils décident finalement de garder Lanfeust en tant qu'étudiant au palais. Mais les choses tourne mal. Thanos, ancien sage ayant mal tourné, enlève les compagnons de Lanfeust et leur fait avouer l'existence de l'épée magique. Il veut la récupérer à tout prix pour régner sur Troy."
@@ -8,8 +8,22 @@ const tome3 = "Lanfeust et Thanos se disputent maintenant l'épée du chevalier 
 const tome4 = "Lanfeust et Thanos courent toujours après le chevalier Or-Azur, celui-ci étant toujours introuvable. Ils le trouvent finalement au grand tournoi des baronneries, grand rendez vous annuel ou les différents barons du pays s'affrontent pour l'honneur. Lanfeust doit à tout prix récupérer l'épée avant Thanos, sous peine de voir le monde de Troy tomber aux mains du tyran."
 const synopsis = [tome1, tome2, tome3, tome4]
 
+// page html ===========================================================
+
+//slider
+
 let tomeDescription = document.getElementById("description")
 tomeDescription.textContent = synopsis[0]
+
+//map
+
+let map = L.map('map').setView([51.505, -0.09], 13);
+
+// functions ===========================================================
+
+//Slider
+
+let position = 0
 
 function changeSlide(sens) {
     position = position + sens
@@ -32,16 +46,19 @@ next.addEventListener('click',function() {
     changeSlide(1)
 })
 
+/*bouton pause : fa-circle-pause */
+/*bouton play : fa-circle-play*/
+
 let isPaused = false
-const pauseButton = document.getElementById("pause")
+const pauseButton = document.getElementById("pause_button")
 
 function togglePause() {
     isPaused = !isPaused
         if (isPaused === true){
-            pauseButton.innerText = "Play"
+            pauseButton.classList.replace("fa-circle-pause", "fa-circle-play")
         }
         else {
-            pauseButton.innerText = "Pause"
+            pauseButton.classList.replace("fa-circle-play", "fa-circle-pause")
         }
 }
 
@@ -54,4 +71,6 @@ function autoDefil() {
 }
 
 setInterval(autoDefil, 5000);
+
+// map
 

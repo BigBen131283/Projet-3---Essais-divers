@@ -17,7 +17,7 @@ tomeDescription.textContent = synopsis[0]
 
 //map
 
-let map = L.map('map').setView([51.505, -0.09], 13);
+let map = L.map('map').setView([51.505, -0.09], 10);
 
 // functions ===========================================================
 

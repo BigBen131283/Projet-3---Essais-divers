@@ -15,18 +15,6 @@ const synopsis = [tome1, tome2, tome3, tome4]
 let tomeDescription = document.getElementById("description")
 tomeDescription.textContent = synopsis[0]
 
-//map
-
-let mapquestkey = 'Ou16zkSpxJ8izAZ4MEUjBSLFDskRxu4';
-L.mapquest.key = mapquestkey;
-let map = L.map('map', {
-    center: [51.505, -0.09],
-    layers: L.mapquest.tileLayer('map'),
-    zoom: 12,   // Zoom range from 1 to 18, the greater the more focused
-    minZoom: 10,
-    maxZoom: 16,
-});
-
 // functions ===========================================================
 
 //Slider
@@ -43,6 +31,8 @@ function changeSlide(sens) {
     document.getElementById("slide").src = slide[position]
     document.getElementById("description").innerText = synopsis[position]
 }
+
+//Navigation
 
 const previous = document.getElementById("previous")
 const next = document.getElementById("next")
@@ -80,5 +70,15 @@ function autoDefil() {
 
 setInterval(autoDefil, 5000);
 
-// map
+//map
+
+let mapquestkey = 'Ou16zkSpxJ8izAZ4MEUjBSLFDskRxu4';
+L.mapquest.key = mapquestkey;
+let map = L.map('map', {
+    center: [36.693935, 137.220853],
+    layers: L.mapquest.tileLayer('map'),
+    zoom: 10,   // Zoom range from 1 to 18, the greater the more focused
+    minZoom: 10,
+    maxZoom: 16,
+});
 

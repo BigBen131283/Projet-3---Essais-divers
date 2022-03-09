@@ -1,3 +1,5 @@
+import stations from "./resources/stations.js"
+
 // variables ============================================================
 
 const slide = ["./images/tome1.jpg", "./images/tome2.jpg", "./images/tome3.jpg", "./images/tome4.jpg"]
@@ -81,4 +83,13 @@ let map = L.map('map', {
     minZoom: 10,
     maxZoom: 16,
 });
+
+// chargement des stations
+let city = new stations("toyama")
+
+let allStations = city.loadStation();
+
+console.log(allStations)
+
+
 

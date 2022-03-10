@@ -1,4 +1,4 @@
-import stations from "./resources/stations.js"
+
 
 // variables ============================================================
 
@@ -74,8 +74,7 @@ setInterval(autoDefil, 5000);
 
 //map
 
-// let mapquestkey = 'Ou16zkSpxJ8izAZ4MEUjBSLFDskRxu4';
-let mapquestkey = 'rQpw7O2I6ADzhQAAJLS4vZZ5PN7TLMX2';
+let mapquestkey = 'Ou16zkSpxJ8izAZ4MEUjBSLFDskRxu4';
 L.mapquest.key = mapquestkey;
 let map = L.map('map', {
     center: [36.693935, 137.220853],
@@ -86,13 +85,5 @@ let map = L.map('map', {
 });
 
 // chargement des stations
-let city = new stations("toyama")
-city.loadStation()
-    .then( resp => {
-        console.log(resp)
-    })
-    .catch(err => {
-        console.log(err)
-})
 
 
